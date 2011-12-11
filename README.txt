@@ -8,6 +8,7 @@ Included in distribution:
 - ArduinoNagiosDisplay.pde, based on Arduino SimpleClient and shiftOutCode Hello World examples
 - nag.php, based on GPL-licensed code by Jason Antman
 - ShiftOutExample images, copyright Arduino
+- display images, by me
 
 To assemble the hardware, I recommend an Arduino Diamondback, which is essentially an Arduino + WiShield.
 Look at the included ShiftOutExample images which are taken from the Shift Out Arduino tutorial at http://arduino.cc/en/Tutorial/ShiftOut
