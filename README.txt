@@ -9,13 +9,14 @@ Included in distribution:
 - nag.php, based on GPL-licensed code by Jason Antman
 - ShiftOutExample images, copyright Arduino
 - display images, by me
+- linksprite-WiShield.zip library
+
+Overview: Nagios keeps its status info in a status.dat file somewhere, which nag.php parses and outputs in a simplified way. ArduinoNagiosDisplay.pde gets loaded onto a WiFi-equipped Arduino, connects to nag.php, parses that simple data, and lights up LEDs corresponding to each server. You'll need to edit some settings in both files to make them work, but if you're halfway familiar with your Nagios installation, Arduino programming (especially the ShiftOut and SimpleClient examples), and networking (what's a subnet mask?) you should be fine. I'd love to see other people use this code and ask questions, too.
 
 To assemble the hardware, I recommend an Arduino Diamondback, which is essentially an Arduino + WiShield.
 Look at the included ShiftOutExample images which are taken from the Shift Out Arduino tutorial at http://arduino.cc/en/Tutorial/ShiftOut
 The only difference is that the Diamondback/WiShield uses pins 14, 11, and 12 so I'm using pins 5,7, and 8 instead.
 
-To get the microcontroller software working, look at the ArduinoNagiosDisplay.pde comments.
+To get the microcontroller software working, first unzip the linksprite-WiShield library to your Arduino program's libraries folder, and edit apps-conf.h -- comment out the APP_WEBSERVER line and uncomment the APP_WISERVER line. Then look at the ArduinoNagiosDisplay.pde comments to see what to modify.
 
-Also, put the nag.php script on your Nagios server outside of any authentication requirements. I put it at /var/www/nag.php . See the comment in the file and modify settings as needed.
-
-Overview: Nagios keeps its status info in a status.dat file somewhere, which nag.php parses and outputs in a simplified way. ArduinoNagiosDisplay.pde gets loaded onto a WiFi-equipped Arduino, connects to nag.php, parses that simple data, and lights up LEDs corresponding to each server. You'll need to edit some settings in both files to make them work, but if you're halfway familiar with your Nagios installation, Arduino programming (especially the ShiftOut and SimpleClient examples), and networking (what's a subnet mask?) you should be fine. I'd love to see other people use this code and ask questions, too.
+To get the server working, put the nag.php script on your Nagios server outside of any authentication requirements. I put it at /var/www/nag.php . See the comment in the file and modify settings as needed.
