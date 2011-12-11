@@ -35,6 +35,8 @@
 // change the statusFile to the location of status.dat on your Nagios system
 $statusFile = "/var/cache/nagios3/status.dat";
 
+// ------------- end config
+
 $nag_version = getFileVersion($statusFile); // returns integer 2 or 3
 $created_ts = 0;
 
