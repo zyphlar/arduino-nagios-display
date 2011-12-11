@@ -1,6 +1,7 @@
 Arduino Nagios Display
+by Will Bradley, www.zyphon.com/arduino-nagios
 
-For creating an WiFi-enabled, Arduino-powered 8x5 LED matrix that displays Nagios status information
+For creating an WiFi-enabled, Arduino-powered 8x5 LED matrix that displays Nagios status information.
 Intentionally kept hackable, with lots of commented-out sections and debugging information available, because everyone's environment is slightly different.
 
 Included in distribution:
